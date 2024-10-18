@@ -27,27 +27,28 @@ import numpy as np
 import matplotlib.pyplot as plt
 X=np.array(eval(input()))
 Y=np.array(eval(input()))
-X_mean =np.mean(X)
-Y_mean =np.mean(Y)
+X_mean=np.mean(X)
+Y_mean=np.mean(Y)
 num=0
 denom=0
 for i in range(len(X)):
-  num+=(X[i]-X_mean)*(Y[i]-Y_mean)
-  denom+=(X[i]-X_mean)**2
+    num+=(X[i]-X_mean)*(Y[i]-Y_mean)
+    denom+=(X[i]-X_mean)**2
 m=num/denom
-b=Y_mean - m*X_mean
-print(m,b)
-Y_predicted=m*X+b
-print(Y_predicted)
-plt.scatter(X,Y,color="green")
-plt.plot(X,Y_predicted,color='orange') 
+b=Y_mean-m*X_mean
+print("Slope:",m)
+print("Y_Intercept:",b)
+y_predicted=m*X+b
+print("Y_Predicted:",y_predicted)
+plt.scatter(X,Y)
+plt.plot(X,y_predicted,color='red')
 plt.show()
+
+
 ```
 
 ## Output:
-![2024-08-29 (1)(1)(1)](https://github.com/user-attachments/assets/13c1763a-6992-40e0-8184-59d5e12509e9)
-
-
+![image](https://github.com/user-attachments/assets/ccc31c52-5b1f-4ce6-8c6d-afdba7dced53)
 
 ## Result:
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares using python programming.
